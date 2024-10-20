@@ -42,7 +42,7 @@ jobs:
       - name: Log in to Quay.io
         uses: redhat-actions/podman-login@v1
         with:
-          username: tvattima+github
+          username: ${{ vars.QUAY_USERNAME }}
           password: ${{ secrets.QUAY_TOKEN }}
           registry: quay.io/tvattima/lego-sandbox-service
 
