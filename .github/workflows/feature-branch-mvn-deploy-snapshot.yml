@@ -39,13 +39,6 @@ jobs:
           containerfiles: |
             ./kubernetes/Containerfile
 
-      - name: Log in to Quay.io
-        uses: redhat-actions/podman-login@v1
-        with:
-          username: ${{ vars.QUAY_USERNAME }}
-          password: ${{ secrets.QUAY_TOKEN }}
-          registry: quay.io/tvattima/lego-sandbox-service
-
       - name: Podman Push
         uses: redhat-actions/push-to-registry@v2
         with:
