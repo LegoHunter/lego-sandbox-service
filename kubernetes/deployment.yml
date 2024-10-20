@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lego-sandbox-service-deployment
+  namespace: sandbox
+  labels:
+    app: lego-sandbox-service-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lego-sandbox-service-deployment
+  template:
+    metadata:
+      name: lego-sandbox-service-deployment
+      labels:
+        app: lego-sandbox-service-deployment
+    spec:
+      containers:
+        - name: lego-sandbox-service-deployment
+          image: quay.io/tvattima/lego-sandbox-service
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: ABC
+              value: "123"
+      restartPolicy: Always
+      
