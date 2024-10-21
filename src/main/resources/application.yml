@@ -9,3 +9,6 @@ spring:
         namespace: sandbox
         sources: /etc/.credentials/bricklink-client-api-keys
 
+logging:
+  level:
+    root: debug
