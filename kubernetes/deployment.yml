@@ -26,5 +26,12 @@ spec:
           env:
             - name: ABC
               value: "123"
+          volumeMounts:
+            - name: bricklink-client-api-keys
+              mountPath: "/etc/.credentials"
+              readOnly: true
+      volumes:
+        - name: bricklink-client-api-keys
+          secret:
+            secretName: bricklink-client-api-keys
       restartPolicy: Always
-      
