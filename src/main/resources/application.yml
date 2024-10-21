@@ -5,9 +5,14 @@ spring:
     kubernetes:
       secrets:
         enabled: true
-        name: bricklink-client-api-keys
+        name: bricklink
         namespace: sandbox
-        sources: /etc/.credentials/bricklink-client-api-keys
+        sources:
+          - name: bricklink-client-api-keys
+        fail-fast: true
+        paths: /etc/.credentials/bricklink-client-api-keys
+      config:
+        fail-fast: true
 
 logging:
   level:
