@@ -56,3 +56,4 @@ jobs:
       - name: Redeploy on Kubernetes cluster
         run: |
           kubectl set image deployment/lego-sandbox-service-deployment lego-sandbox-service-deployment=quay.io/tvattima/lego-sandbox-service:snapshot --namespace=sandbox
+          kubectl set image deployment/lego-sandbox-service-deployment lego-sandbox-service-deployment=quay.io/tvattima/lego-sandbox-service --namespace=sandbox

@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    kubernetes:
+      enabled: true
+
+      # Theoretically, Spring Cloud Kubernetes supports reloading.
+      # It may require code changes to make full use of that.
+      reload:
+        enabled: false
+
+      # Config requires the service account of the Pod to have access
+      # to ConfigMaps.
+      config:
+        enabled: false
+
+      # Enable scanning for secrets; does not require special
+      # ServiceAccount access like 'config'. 'paths' may contain a list.
+      secrets:
+        paths: /etc/.credentials/bricklink
+        enabled: true

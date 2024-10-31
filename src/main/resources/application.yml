@@ -1,19 +1,15 @@
+
 spring:
   application:
-    name: sandbox-service
-  cloud:
-    kubernetes:
-      secrets:
-        enabled: true
-        name: bricklink
-        namespace: sandbox
-        sources:
-          - name: bricklink-client-api-keys
-        fail-fast: true
-        paths: /etc/.credentials/bricklink-client-api-keys
-      config:
-        fail-fast: true
+    name: lego-sandbox-service
+  config:
+    import: file:/etc/.credentials/bricklink/bricklink-client-api-keys.yml
 
 logging:
   level:
-    root: debug
+    root: info
+
+
+
+
+
