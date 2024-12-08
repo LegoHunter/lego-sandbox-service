@@ -31,6 +31,10 @@ spec:
               mountPath: /etc/.credentials/bricklink
       volumes:
         - name: bricklink-volume
-          secret:
-            secretName: bricklink
+          projected:
+            sources:
+            - secret:
+                name: bricklink-client-api-keys
+            - secret:
+                name: bricklink-web
       restartPolicy: Always

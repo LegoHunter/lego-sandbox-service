@@ -11,7 +11,6 @@ public class SandboxServiceApplication {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(SandboxServiceApplication.class)
-                .initializers(new JsonPropertyContextInitializer())
                 .run(args);
     }
 }
