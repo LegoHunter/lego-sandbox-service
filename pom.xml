@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>net.legohunter</groupId>
-	<artifactId>sandbox-service</artifactId>
+	<artifactId>lego-sandbox-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Lego :: Sandbox Service</name>
 	<description>Demo project for Spring Boot</description>
