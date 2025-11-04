@@ -48,9 +48,9 @@ jobs:
           username: ${{ vars.QUAY_USERNAME }}
           password: ${{ secrets.QUAY_TOKEN }}
 
-  deploy-to-legolandserver1:
+  deploy-to-legohunter-io:
     needs: Feature-Branch-Maven-Deploy-Snapshot
-    runs-on: [ self-hosted, Linux, ARM64 ]
+    runs-on: [ arc-runner, Linux, ARM64 ]
 
     steps:
       - name: Redeploy on Kubernetes cluster
