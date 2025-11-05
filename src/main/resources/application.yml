@@ -1,8 +1,6 @@
 spring:
   application:
     name: lego-sandbox-service
-  config:
-    import: file:/etc/.credentials/bricklink/bricklink-client-api-keys.yml, file:/etc/.credentials/bricklink/bricklink-web.yml
 
 logging:
   level:
