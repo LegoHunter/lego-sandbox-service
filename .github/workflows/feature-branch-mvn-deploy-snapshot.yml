@@ -57,5 +57,5 @@ jobs:
 
       - name: Deploy on Kubernetes cluster
         run: |
-          sed "s|snapshot|$(date +%Y%m%d-%H%M)|" kubernetes/deployment.yaml | kubectl apply -f -
+          sed "s|snapshot|$(date +%Y%m%d-%H%M)|" kubernetes/deployment.yml | kubectl apply -f -
           kubectl rollout status deployment/lego-sandbox-service -n sandbox
