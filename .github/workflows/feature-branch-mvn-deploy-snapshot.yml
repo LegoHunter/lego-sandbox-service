@@ -50,7 +50,7 @@ jobs:
 
   deploy-to-legohunter-io:
     needs: Feature-Branch-Maven-Deploy-Snapshot
-    runs-on: [ arc-runner ]
+    runs-on: [ arc-runner, arm64 ]
 
     steps:
       - name: Redeploy on Kubernetes cluster
