@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: lego-sandbox-service-deployment
-  namespace: sandbox
+  namespace: services-sandbox
   labels:
     app: lego-sandbox-service-deployment
 spec:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: lego-sandbox-service-deployment
-          image: quay.io/tvattima/lego-sandbox-service
+          image: quay.io/tvattima/lego-sandbox-service:snapshot
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
