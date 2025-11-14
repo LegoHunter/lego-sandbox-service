@@ -38,13 +38,13 @@ spec:
               - secret:
                   name: bricklink-client-api-keys-secret
                   items:
-                    - key: bricklink-client-api-keys.json
-                      path: bricklink-client-api-keys.json
+                    - key: bricklink-client-api-keys.yml
+                      path: bricklink-client-api-keys.yml
               - secret:
                   name: bricklink-web-secret
                   items:
-                    - key: bricklink-web.json
-                      path: bricklink-web.json
+                    - key: bricklink-web.yml
+                      path: bricklink-web.yml
         - name: database
           secret:
             secretName: database-configuration-secret
