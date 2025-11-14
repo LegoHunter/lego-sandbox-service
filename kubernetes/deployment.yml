@@ -27,15 +27,25 @@ spec:
             - name: ABC
               value: "123"
           volumeMounts:
-            - name: bricklink-configuration
+            - name: bricklink
               mountPath: /etc/.credentials/bricklink
-            - name: database-configuration
+            - name: database
               mountPath: /etc/.credentials/database
       volumes:
-        - name: bricklink-configuration
-          secret:
-            secretName: bricklink-configuration-secret
-        - name: database-configuration
+        - name: bricklink
+          projected:
+            sources:
+              - secret:
+                  name: bricklink-client-api-keys-secret
+                  items:
+                    - key: bricklink-client-api-keys.json
+                      path: bricklink-client-api-keys.json
+              - secret:
+                  name: bricklink-web-secret
+                  items:
+                    - key: bricklink-web.json
+                      path: bricklink-web.json
+        - name: database
           secret:
             secretName: database-configuration-secret
       restartPolicy: Always
