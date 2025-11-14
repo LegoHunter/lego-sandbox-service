@@ -57,6 +57,7 @@ jobs:
 
       - name: Deploy on Kubernetes cluster
         run: |
-          sed "s|snapshot|$(date +%Y%m%d-%H%M)|" kubernetes/deployment.yml | kubectl apply -f -
+          kubectl apply -f kubernetes/deployment.yml
           echo "Waiting for rollout to complete..."
           kubectl rollout status deployment/lego-sandbox-service-deployment -n services-sandbox --timeout=180s || true
+
