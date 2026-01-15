@@ -24,6 +24,7 @@ jobs:
           distribution: 'temurin'
           architecture: x64
           cache: maven
+
       - name: mvn deploy
         run: mvn --update-snapshots deploy
         env:
