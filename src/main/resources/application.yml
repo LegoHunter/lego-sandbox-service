@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: lego-sandbox-service
+
+logging:
+  level:
+    root: info

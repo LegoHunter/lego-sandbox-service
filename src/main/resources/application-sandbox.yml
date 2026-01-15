@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    database-key-name: legolandserver1-lego-sandbox
+  config:
+    import: file:${import-path}/bricklink/bricklink-client-api-keys.yml, file:${import-path}/bricklink/bricklink-web.yml
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

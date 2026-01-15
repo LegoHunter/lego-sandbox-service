@@ -1,0 +1,8 @@
+bricklink:
+  rest:
+    consumer:
+      key: 123
+      secret: 123
+    token:
+      value: 123
+      secret: 123
