@@ -1,0 +1,7 @@
+import-path: /dev/config
+
+spring:
+  config:
+    import: classpath:${import-path}/database/database-configuration.yml
+  datasource:
+    database-key-name: test
