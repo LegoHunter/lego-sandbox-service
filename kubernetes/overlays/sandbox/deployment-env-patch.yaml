@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lego-sandbox-service
+spec:
+  template:
+    spec:
+      containers:
+        - name: lego-sandbox-service
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: kubernetes,sandbox

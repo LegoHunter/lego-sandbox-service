@@ -1,6 +1,8 @@
 spring:
+  profiles:
+    default: local,sandbox
   application:
-    name: lego-sandbox-service
+    name: Lego Sandbox Service
 
 logging:
   level:
