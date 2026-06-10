@@ -5,9 +5,13 @@ management:
     web:
       exposure:
         include: "*"
+  tracing:
+    enabled: false
+  defaults:
+    metrics:
+      export:
+        enabled: false
 
 logging:
   level:
-    org.springframework.core.env: TRACE
-    org.springframework.boot.context.config: DEBUG
-    com.zaxxer: DEBUG
+    root: INFO

@@ -1,6 +1,7 @@
 spring:
   config:
-    import: file:${import-path}/database-configuration.yml
+    import:
+     - file:${import-path}/database-configuration.yml
   datasource:
     database-key-name: rasppi5-01-lego-sandbox
     hikari:
@@ -14,12 +15,3 @@ spring:
       maximum-pool-size: 40
       validation-timeout: 10000
       pool-name: rasppi5-01-mysql-jdbc-pool
-
-logging:
-  level:
-    com.zaxxer: DEBUG
-
-otel:
-  resource:
-      deployment:
-        environment: sandbox
